@@ -7,7 +7,17 @@
 上传网文 TXT → 按章切分 → 向量库 + BM25 → 混合检索 → Rerank → DeepSeek 流式回答。  
 前端产品名 **阅笺**：阅读器 + 侧栏问答，答案附原文出处。
 
-**请勿提交** `.env`、向量库、上传小说与简历等个人文件；配置请复制 `.env.example`。
+### 入库格式说明（重要）
+
+| 格式 | 状态 |
+|------|------|
+| **TXT** | 已支持（当前**唯一**知识库入库格式） |
+| PDF / Word / EPUB / 图片等 | **未支持** |
+
+请使用 `.txt` 上传；其它格式需自行转换为文本后再导入。  
+仓库内已附四本公版示例小说，见 [`samples/`](./samples/)。
+
+**请勿提交** `.env`、本地向量库 `chroma_db/`、运行时 `data/` 与简历等个人文件；配置请复制 `.env.example`。
 
 ## 技术栈
 
@@ -61,13 +71,14 @@ npm run dev
 
 浏览器打开 http://127.0.0.1:5173（已代理 `/api` 到后端 `8000`）。
 
-### 5. 离线入库（可选）
+### 5. 导入示例小说（可选）
 
 ```bash
-python scripts/ingest_book.py path/to/your-novel.txt
+python scripts/ingest_book.py samples/novels/西游记.txt
+# 或：红楼梦.txt / 三国演义.txt / 水浒传.txt
 ```
 
-长篇小说首次向量化可能需要数分钟。
+也可在前端「导入 TXT 小说」。长篇首次向量化可能需要数分钟。
 
 ## 切分策略
 
@@ -79,5 +90,5 @@ python scripts/ingest_book.py path/to/your-novel.txt
 
 ## 首期范围
 
-- 已做：上传、按章阅读、混合检索、Rerank、LLM 质检二次检索、DeepSeek 流式问答与出处跳转
-- 未做：多用户鉴权、EPUB/PDF、独立 Agent 编排
+- 已做：TXT 上传入库、按章阅读、混合检索、Rerank、LLM 质检二次检索、DeepSeek 流式问答与出处跳转
+- 未做：PDF / 图片等非 TXT 入库、多用户鉴权、EPUB、独立 Agent 编排
