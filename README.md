@@ -64,7 +64,7 @@ npm run dev
 ### 5. 离线入库（可选）
 
 ```bash
-python scripts/ingest_book.py "D:\新建文件夹\我的26岁女房客 (1).txt"
+python scripts/ingest_book.py path/to/your-novel.txt
 ```
 
 长篇小说首次向量化可能需要数分钟。
@@ -79,5 +79,5 @@ python scripts/ingest_book.py "D:\新建文件夹\我的26岁女房客 (1).txt"
 
 ## 首期范围
 
-- 已做：上传、按章阅读、混合检索、Rerank、DeepSeek 流式问答
-- 未做：溯源卡片、多用户鉴权、EPUB/PDF、Agent
+- 已做：上传、按章阅读、混合检索、Rerank、LLM 质检二次检索、DeepSeek 流式问答与出处跳转
+- 未做：多用户鉴权、EPUB/PDF、独立 Agent 编排
