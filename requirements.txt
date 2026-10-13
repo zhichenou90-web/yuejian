@@ -1,0 +1,32 @@
+# Web framework
+fastapi
+uvicorn[standard]
+
+# LLM orchestration
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-chroma
+langchain-text-splitters
+
+# Vector database
+chromadb
+
+# Validation and config
+pydantic
+pydantic-settings
+python-dotenv
+
+# SSE streaming
+sse-starlette
+
+# File upload
+python-multipart
+
+# HTTP client (Rerank API)
+httpx
+
+# Hybrid retrieval
+rank-bm25
+jieba

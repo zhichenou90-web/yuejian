@@ -1,0 +1,45 @@
+# 密钥与本地环境
+.env
+.env.local
+.env.*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 本地数据与向量库（含用户上传小说、SQLite）
+chroma_db/
+data/
+*.db
+
+# 前端构建与依赖
+frontend/node_modules/
+frontend/dist/
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 临时脚本与调试产物
+_novel_*.json
+_tmp_*.py
+_tmp_*.txt
+*.log
+
+# 本地小说清洗脚本（含个人路径，不入库）
+clean_novel.py
+
+# 个人简历与隐私文件（勿上传 GitHub）
+*.docx
+*.doc
+*.pdf
+简历*
+欧智琛*

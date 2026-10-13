@@ -1,0 +1,67 @@
+:root {
+  /* 阅笺：冷纸阅读面、青绿书脊、朱红出处标记 */
+  --ink: #152028;
+  --ink-soft: #4a5a66;
+  --paper: #e8eef2;
+  --paper-deep: #d5dee4;
+  --panel: #f4f7f9;
+  --line: #c5d0d8;
+  --spine: #163d3a;
+  --spine-ink: #d7ebe7;
+  --spine-mute: #8fb5ae;
+  --accent: #c81d35;
+  --accent-deep: #9e1529;
+  --proof: var(--accent);
+  --proof-deep: var(--accent-deep);
+  --wash: #b9d4cf;
+  --focus: #2a6f68;
+  --radius: 8px;
+  --radius-sm: 6px;
+  --reader-font: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  --display-font: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  --brand-font: 'ZCOOL XiaoWei', 'Noto Serif SC', serif;
+  --ui-font: 'Bricolage Grotesque', 'Noto Sans SC', 'PingFang SC', sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 8px 28px rgba(21, 32, 40, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  font-family: var(--ui-font);
+  color: var(--ink);
+  background:
+    linear-gradient(165deg, #cfd8df 0%, transparent 42%),
+    linear-gradient(340deg, rgba(22, 61, 58, 0.1) 0%, transparent 38%),
+    #d8e0e6;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
